@@ -1,0 +1,30 @@
+{
+    "mcpServers": {
+        "azureDevOps": {
+            "type": "stdio",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@tiberriver256/mcp-server-azure-devops"
+            ],
+            "env": {
+                "AZURE_DEVOPS_ORG_URL": "https://navi.united-imaging.com/RT",
+                "AZURE_DEVOPS_AUTH_METHOD": "pat",
+                "AZURE_DEVOPS_PAT": "YOUR_AZURE_DEVOPS_PAT",
+                "AZURE_DEVOPS_DEFAULT_PROJECT": "WebOIS"
+            }
+        },
+        "sonarqube": {
+            "command": "npx",
+            "args": [
+                "--yes",
+                "sonarqube-mcp-server@latest"
+            ],
+            "env": {
+                "SONARQUBE_URL": "http://sonar-server-01:8000",
+                "SONARQUBE_USERNAME": "nihao.dong",
+                "SONARQUBE_PASSWORD": "YOUR_SONARQUBE_PASSWORD"
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+agent-framework==1.10.0
+agent-framework-core==1.10.0
+agent-framework-openai==1.10.0
+openai>=2.0.0
+mcp>=1.12.4
+requests==2.32.3
+pydantic>=2.10.2
+typing-extensions>=4.12.2
+gitpython==3.1.43
+python-dotenv==1.0.1
+colorama==0.4.6
+rich==13.9.4
+lark-oapi>=1.0.28

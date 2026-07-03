@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# 环境变量（含敏感信息）
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# 运行时数据
+TempLog/
+WebOIS/
+
+# 系统
+.DS_Store
+Thumbs.db
