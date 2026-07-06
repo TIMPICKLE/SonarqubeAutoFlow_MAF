@@ -215,7 +215,8 @@ SonarqubeAutoFlow_SingleProject_MAF/
 │
 ├── doc/
 │   ├── 技术文档.md               # 教学型技术文档（架构/数据流/设计决策）
-│   └── 迁移实现说明.md           # 迁移过程与文档勘误
+│   ├── 迁移实现说明.md           # 迁移过程与文档勘误
+│   └── Q&A.md                   # MAF 架构面试问答（ReAct/Multi-Agent/Skill vs MCP）
 │
 ├── TempLog/                     # 运行时日志
 └── .claude/                     # Claude Code skills 配置
@@ -381,10 +382,16 @@ PR 创建成功: https://.../pullrequest/12345
 
 ## 设计文档
 
-| 文档 | 说明 |
-|------|------|
-| [doc/技术文档.md](doc/技术文档.md) | 教学型技术文档：技术栈、解决的问题、架构设计、运行时数据流、设计决策 |
-| [doc/迁移实现说明.md](doc/迁移实现说明.md) | 从 LangGraph 迁移到 MAF 的实现细节与原文档勘误 |
+`doc/` 文件夹下包含三份配套文档，建议按以下顺序阅读：
+
+### [技术文档.md](doc/技术文档.md) — 系统全景
+教学型技术文档，适合第一次接触本项目的人。涵盖技术栈详解、解决的核心问题、四层架构设计、运行时数据流时序图、关键设计决策，以及与原 LangGraph 版本的代码量对比。包含 6 张 Mermaid 架构图。
+
+### [Q&A.md](doc/Q&A.md) — 架构面试问答
+以 10 个面试问答深入讲解 MAF 的核心机制：ReAct 循环如何用（含本项目真实代码）、Multi-Agent Workflow 的四种模式、Skill 能否替代 MCP、确定性节点为何不交给 Agent、function calling 可靠性边界、WorkflowBuilder 选型、错误处理、模型降级、四概念边界、多 Agent 扩展方案。所有 API 签名基于 agent-framework 1.10.0 实际验证。
+
+### [迁移实现说明.md](doc/迁移实现说明.md) — 迁移细节
+从 LangGraph 迁移到 MAF 的实现细节记录，包含 MAF API 的实际验证过程和原文档勘误。
 
 ---
 
